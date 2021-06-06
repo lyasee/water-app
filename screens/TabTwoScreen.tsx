@@ -8,6 +8,7 @@ import Colors from "../constants/Colors";
 import Footer from "../components/basic/Footer";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as MailComposer from "expo-mail-composer";
+import * as Analytics from "expo-firebase-analytics";
 
 const { width } = Dimensions.get("screen");
 
@@ -15,13 +16,25 @@ export default function TabTwoScreen() {
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme];
 
-  const handlePressContactUs = () => {
+  const handlePressContactUs = async () => {
+    await Analytics.logEvent("ContactUsTapped", {
+      name: "contact",
+      screen: "InformationScreen",
+      purpose: "Contract Us open email",
+    });
+
     MailComposer.composeAsync({
       recipients: ["notice.rokgg@gmail.com"],
     });
   };
 
-  const handlePressKimpDownload = () => {
+  const handlePressKimpDownload = async () => {
+    await Analytics.logEvent("DownloadTapped", {
+      name: "download",
+      screen: "InformationScreen",
+      purpose: "Kimp app download",
+    });
+
     Linking.openURL("https://kimpapp.page.link/default");
   };
 

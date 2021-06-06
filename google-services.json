@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "760930388715",
+    "project_id": "water-70b6f",
+    "storage_bucket": "water-70b6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760930388715:android:148e7787bad859dd128cae",
+        "android_client_info": {
+          "package_name": "com.lyasee.water"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760930388715-buo92sl6l10iht9dhsm8ut6mk4kr1gof.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lyasee.water",
+            "certificate_hash": "948a2ff269880bb87888a60b7e75610af0ba914c"
+          }
+        },
+        {
+          "client_id": "760930388715-ptgjd0qefsrped0viqf1m5s3arik0v7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl74J0xcc51YocMooaU54CR48yA3deIbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760930388715-ptgjd0qefsrped0viqf1m5s3arik0v7l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "760930388715-dni74nljkq5ns5rla1viiogousfkv7cj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lyasee.water",
+                "app_store_id": "1571019096"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

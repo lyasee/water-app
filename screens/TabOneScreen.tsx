@@ -5,7 +5,6 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
-  TextInput,
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from "react-native";
@@ -17,6 +16,7 @@ import { Text, View } from "../components/Themed";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import { IScaleTradingHistory } from "../types/calculator.types";
+import * as Analytics from "expo-firebase-analytics";
 
 export default function TabOneScreen() {
   const colorScheme = useColorScheme();
@@ -40,7 +40,13 @@ export default function TabOneScreen() {
 
   const [histories, setHistories] = React.useState<IScaleTradingHistory[]>([]);
 
-  const handlePressAdditionalScaleTrading = () => {
+  const handlePressAdditionalScaleTrading = async () => {
+    await Analytics.logEvent("ButtonTapped", {
+      name: "additionalButton",
+      screen: "HomeScreen",
+      purpose: "additional scale trading",
+    });
+
     if (
       !price ||
       !totalPrice ||
@@ -71,7 +77,13 @@ export default function TabOneScreen() {
     setHistories(copy);
   };
 
-  const handlePressResetButton = () => {
+  const handlePressResetButton = async () => {
+    await Analytics.logEvent("ButtonTapped", {
+      name: "resetButton",
+      screen: "HomeScreen",
+      purpose: "reset",
+    });
+
     setPrice("");
     setQuantity("");
     setAddPrice("");

@@ -21,7 +21,9 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.lyasee.water",
-      "buildNumber": "1"
+      "buildNumber": "1",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "associatedDomains": ["applinks:addwater.page.link"]
     },
     "android": {
       "splash": {
@@ -30,13 +32,38 @@
       "icon": "./assets/images/adaptive-icon.png",
       "package": "com.lyasee.water",
       "versionCode": 1,
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#000"
-      }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "https",
+              "host": "addwater.page.link",
+              "pathPrefix": "/"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
     },
     "web": {
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyDrB5HmApJXbyTD54Nxyq_9YwSLtw1ishg",
+          "authDomain": "water-70b6f.firebaseapp.com",
+          "projectId": "water-70b6f",
+          "storageBucket": "water-70b6f.appspot.com",
+          "messagingSenderId": "760930388715",
+          "appId": "1:760930388715:web:a6534727e814530b128cae",
+          "measurementId": "G-ZE304EMF4Q"
+        }
+      }
     }
   }
 }
