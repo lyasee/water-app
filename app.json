@@ -3,14 +3,14 @@
     "name": "물타기",
     "slug": "water",
     "version": "1.0.0",
-    "orientation": "default",
+    "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "water",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "enabled": true,
@@ -19,9 +19,8 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true,
       "bundleIdentifier": "com.lyasee.water",
-      "buildNumber": "1",
+      "buildNumber": "3",
       "googleServicesFile": "./GoogleService-Info.plist",
       "associatedDomains": ["applinks:addwater.page.link"]
     },
@@ -35,7 +34,7 @@
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#000"
+        "backgroundColor": "#000000"
       },
       "intentFilters": [
         {
