@@ -6,7 +6,7 @@
 import {
   NavigationContainer,
   DefaultTheme,
-  DarkTheme,
+  DarkTheme
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
@@ -20,7 +20,7 @@ import LinkingConfiguration from "./LinkingConfiguration";
 import * as Analytics from "expo-firebase-analytics";
 
 export default function Navigation({
-  colorScheme,
+  colorScheme
 }: {
   colorScheme: ColorSchemeName;
 }) {
@@ -72,7 +72,7 @@ function RootNavigator() {
   React.useEffect(() => {
     async function prepare() {
       try {
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
       } catch (e) {
       } finally {
         setAppIsReady(true);
